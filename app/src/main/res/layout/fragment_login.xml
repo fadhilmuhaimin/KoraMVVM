@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="id.autodhil.koramvvm.login.LoginViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    snackbar="@{viewModel.message}"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background_login"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/kora"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        />
+
+    <LinearLayout
+        android:id="@+id/email"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/bcg_login"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <ImageView
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/mail"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_email"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            app:errorEnabled="true"
+            app:hintEnabled="false">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_emaill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colortransparant"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:hint="@string/email"
+                android:paddingBottom="@dimen/size5dip"
+                android:paddingLeft="@dimen/size15dip"
+                android:paddingRight="@dimen/size15dip"
+                android:paddingTop="@dimen/size5dip"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/hitamgray"
+                android:textSize="@dimen/title_font">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/password"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/bcg_login"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <ImageView
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_lock_outline_black_24dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_password"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            app:errorEnabled="true"
+            app:hintEnabled="false">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_passs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colortransparant"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:hint="@string/text_password"
+                android:paddingBottom="@dimen/size5dip"
+                android:paddingLeft="@dimen/size15dip"
+                android:paddingRight="@dimen/size15dip"
+                android:paddingTop="@dimen/size5dip"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/hitamgray"
+                android:textSize="@dimen/title_font">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lupa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/password"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:layout_marginTop="16dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/black"
+        android:text="Lupa Password ?"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_bcg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lupa"
+        android:layout_marginTop="21dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        />
+    <Button
+        android:id="@+id/btn_google"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        android:layout_marginTop="18dp"
+        android:text="Masuk Sebagai Tamu"
+        android:textAllCaps="false"
+        android:paddingEnd="16dp"
+        android:textColor="#444444"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/belum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Belum Punya Akun ?" />
+        <TextView
+            android:id="@+id/dafar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Daftar"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        visible="@{viewModel.visibility}"
+        style="@style/SpinKitView.RotatingCircle"
+        app:SpinKit_Color="@color/colorPrimary"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

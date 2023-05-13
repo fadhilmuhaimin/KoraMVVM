@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/size10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/s_16dp">
+
+        <TextView
+            android:background="@drawable/border_blue"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Ubah Profil Saya"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+            android:id="@+id/text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text"
+            android:layout_marginTop="@dimen/s_16dp"
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/hitam_dikit"
+            android:id="@+id/name"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            android:hint="Masukkan Nama Anda"
+            android:id="@+id/input_nama"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asal Daerah"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_nama"
+            android:layout_marginTop="@dimen/s_16dp"
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/hitam_dikit"
+            android:id="@+id/wilayah"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/wilayah"
+            android:hint="Masukkan Asal Daerah Anda"
+            android:id="@+id/input_wilayah"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_wilayah"
+            android:layout_marginTop="@dimen/s_16dp"
+            android:text="Simpan"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:id="@+id/btn_oke"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

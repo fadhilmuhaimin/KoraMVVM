@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">KoRa</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">E- Mail</string>
+    <string name="text_password">Password</string>
+    <string name="digit_pass">asdfghjklqwertyuiopzxcvbnmASDFGHJKLQWERTYUIOPZXCVBNM1234567890</string>
+
+    <string name="ulangi_password">Ulangi Password</string>
+    <string name="daftar">Daftar</string>
+    <string name="dbnode_users">Users</string>
+    <string name="komik_sulawesi_selatan">Komik Sulawesi Selatan</string>
+    <string name="image">Image</string>
+    <string name="sejarah">Sejarah</string>
+    <string name="romantis">Romantis</string>
+    <string name="rekomendasi_untuk_anda">Rekomendasi Untuk Anda</string>
+    <string name="genre">Genre</string>
+    <string name="utama">Utama</string>
+    <string name="favorit">Favorit</string>
+    <string name="profil">Profil</string>
+    <string name="baru">Baru!</string>
+    <string name="dialog_new">NewDialog</string>
+</resources>

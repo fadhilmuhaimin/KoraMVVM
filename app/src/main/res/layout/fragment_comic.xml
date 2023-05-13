@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="id.autodhil.koramvvm.content.comic.ComicViewModel" />
+    </data>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/s_16dp">
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/atas"
+            android:background="@color/colorPrimary"/>
+
+        <ImageView
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/atas" />
+
+        <TextView
+            android:id="@+id/tv_kora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/eksplor"
+            app:layout_constraintBottom_toBottomOf="@id/eksplor"
+            android:layout_marginStart="@dimen/s_16dp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold|italic"
+            android:text="KoRa "
+            android:textSize="30dp"/>
+
+        <TextView
+            android:id="@+id/eksplor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/s_16dp"
+            android:layout_marginTop="@dimen/s_16dp"
+            android:textStyle="italic"
+            android:fontFamily="@font/montserrat"
+            android:text="Eksplor Budayamu Disini! "
+            android:textColor="@android:color/white"/>
+
+        <View
+            android:id="@+id/pacu"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="16dp"
+            android:layout_width="0dp"
+            android:layout_height="210dp"
+            app:layout_constraintTop_toTopOf="@id/pacu"
+            app:layout_constraintBottom_toBottomOf="@id/pacu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="300"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2.5dp"
+                app:sliderStartAutoCycle="true"
+                app:sliderIndicatorSelectedColor="@color/colorPrimary"
+                app:sliderIndicatorUnselectedColor="#5A5A5A"
+
+                 />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <TextView
+            android:id="@+id/cadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card"
+            android:layout_marginTop="@dimen/s20dp"
+            android:textColor="@color/main_black"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            android:text="@string/baru"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/s_16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cadd"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/s_16dp"
+            tools:listitem="@layout/item_komik"
+            android:id="@+id/rv_komik"/>
+        <TextView
+            android:id="@+id/caddd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/komedi"
+            android:layout_marginTop="@dimen/s20dp"
+            android:textColor="@color/main_black"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            android:text="@string/rekomendasi_untuk_anda"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/genres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_komik"
+            android:layout_marginTop="@dimen/s20dp"
+            android:textColor="@color/main_black"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            android:text="@string/genre"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/caddd"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            tools:listitem="@layout/item_komik"
+            android:id="@+id/rv_komikk"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:id="@+id/btn_genre_romance"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_genre_sejarah"
+            app:layout_constraintTop_toBottomOf="@id/genres"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/genre_romance"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border_blue"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/btn_genre_sejarah"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_genre_horror"
+            app:layout_constraintTop_toBottomOf="@id/genres"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/genre_history"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border_blue"
+            android:padding="10dp"
+            android:contentDescription="@string/image" />
+
+        <ImageView
+            android:id="@+id/btn_genre_horror"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genres"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/genre_horror"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border_blue"
+            android:padding="@dimen/size10dp"/>
+        <ImageView
+            android:id="@+id/btn_genre_komedi"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toEndOf="@id/btn_genre_horror"
+            app:layout_constraintTop_toBottomOf="@id/genres"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/genre_comedy"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/border_blue"
+            android:padding="@dimen/size10dp"/>
+
+        <ImageView
+            android:id="@+id/btn_genre_kehidupan"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toEndOf="@id/btn_genre_komedi"
+            app:layout_constraintTop_toBottomOf="@id/genres"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/genre_life"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/border_blue"
+            android:padding="@dimen/size10dp"/>
+
+        <TextView
+            android:id="@+id/komedi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/btn_genre_romance"
+            app:layout_constraintEnd_toEndOf="@id/btn_genre_romance"
+            app:layout_constraintTop_toBottomOf="@id/btn_genre_romance"
+            android:layout_marginTop="4dp"
+            android:text="@string/romantis"
+            android:padding="8dp"
+            android:textColor="@color/second_black"
+            />
+        <TextView
+            android:id="@+id/sejarah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/btn_genre_sejarah"
+            app:layout_constraintEnd_toEndOf="@id/btn_genre_sejarah"
+            app:layout_constraintTop_toBottomOf="@id/btn_genre_romance"
+            android:layout_marginTop="4dp"
+            android:text="@string/sejarah"
+            android:padding="8dp"
+            android:textColor="@color/second_black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/romantis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/btn_genre_horror"
+            app:layout_constraintEnd_toEndOf="@id/btn_genre_horror"
+            app:layout_constraintTop_toBottomOf="@id/btn_genre_romance"
+            android:layout_marginTop="4dp"
+            android:text="Horror"
+            android:padding="8dp"
+            android:textColor="@color/second_black"
+            />
+
+        <TextView
+            android:id="@+id/komedy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/btn_genre_komedi"
+            app:layout_constraintEnd_toEndOf="@id/btn_genre_komedi"
+            app:layout_constraintTop_toBottomOf="@id/btn_genre_romance"
+            android:layout_marginTop="4dp"
+            android:text="Komedi"
+            android:padding="8dp"
+            android:textColor="@color/second_black"
+            />
+
+        <TextView
+            android:id="@+id/mistery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/btn_genre_kehidupan"
+            app:layout_constraintEnd_toEndOf="@id/btn_genre_kehidupan"
+            app:layout_constraintTop_toBottomOf="@id/btn_genre_romance"
+            android:layout_marginTop="4dp"
+            android:text="Kehidupan"
+            android:padding="8dp"
+            android:textColor="@color/second_black"
+            />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.RotatingCircle"
+            visible="@{viewModel.visibility}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:SpinKit_Color="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,81 @@
+<layout>
+    <data>
+        <variable
+            name="item"
+            type="id.autodhil.koramvvm.content.model.Ep" />
+    </data>
+<androidx.cardview.widget.CardView
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="@dimen/s_8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/view"
+    android:visibility="visible"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="8dp"
+    android:elevation="8dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="16dp"
+
+        >
+        <com.makeramen.roundedimageview.RoundedImageView
+            app:riv_corner_radius="8dp"
+            android:id="@+id/imgg"
+            android:layout_width="44dp"
+            android:layout_height="51dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:scaleType="fitXY"
+            showImage="@{item.image}"/>
+
+        <TextView
+            android:id="@+id/judul_"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/imgg"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@id/ruler"
+            android:layout_marginBottom="2dp"
+            android:textSize="15sp"
+            android:textColor="#25282B"
+            android:text="@{item.title}"
+            android:fontFamily="@font/montserrat"/>
+
+        <View
+            android:id="@+id/ruler"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgg"
+            app:layout_constraintBottom_toBottomOf="@id/imgg"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ruler"
+            app:layout_constraintStart_toEndOf="@id/imgg"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:textColor="#52575C"
+            android:fontFamily="@font/robotoreg"
+            android:textSize="10sp"
+            android:text="@{item.date}"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_font">16sp</dimen>
+    <dimen name="size5dip">5dp</dimen>
+    <dimen name="size15dip">15dp</dimen>
+    <dimen name="size10dp">10dp</dimen>
+    <dimen name="s_8dp">8dp</dimen>
+    <dimen name="s_16dp">16dp</dimen>
+    <dimen name="s_10sp">10sp</dimen>
+    <dimen name="s_12dp">12sp</dimen>
+    <dimen name="s20dp">20dp</dimen>
+</resources>

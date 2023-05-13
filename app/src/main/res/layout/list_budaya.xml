@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="item"
+            type="id.autodhil.koramvvm.content.model.Budaya" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_budaya"
+            showImage="@{item.image}"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:elevation="1dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/size10dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/judul_budaya"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"
+            android:text="@{item.title}"
+            android:textColor="@color/main_black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/viewnya"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline5" />
+
+        <View
+            android:id="@+id/viewnya"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/img_budaya"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_budaya" />
+
+
+        <TextView
+            android:id="@+id/txt_ep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/border_blue"
+            android:padding="6dp"
+            android:text="@{item.city}"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/viewnya" />
+
+
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/robotoreg"
+            android:text="@{item.desc}"
+            android:textAlignment="inherit"
+            android:textColor="@color/second_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_budaya" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

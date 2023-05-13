@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/gou"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/atasnya" />
+
+
+            <View
+                android:id="@+id/atas"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gou" />
+
+            <View
+                android:id="@+id/atasnya"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/parent2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/background_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/atas" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="600dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/profile_image"
+                android:layout_width="120dp"
+                android:layout_height="115dp"
+                android:background="@drawable/background_profile_image"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/profiles_picture"
+                app:layout_constraintBottom_toTopOf="@id/parent2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/parent2"
+                app:riv_corner_radius="100dp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/parent2"
+                app:layout_constraintStart_toStartOf="@id/parent2"
+                app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+            <ImageView
+                android:id="@+id/btn_setting"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_setting"
+                android:padding="8dp"
+                android:src="@drawable/gear"
+                app:layout_constraintEnd_toEndOf="@id/parent2"
+                app:layout_constraintTop_toTopOf="@id/parent2" />
+
+            <TextView
+                android:id="@+id/lokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/regular"
+
+                android:textColor="@color/hitam_dikit"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@id/parent2"
+                app:layout_constraintStart_toStartOf="@id/parent2"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lokasi">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <TextView
+                        android:id="@+id/dimiliki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/regular"
+                        android:text="Komik Tersedia"
+                        android:textColor="@color/grey_dikit"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toStartOf="@id/guideline3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/regular"
+                        android:text="Komik Favorit"
+                        android:textColor="#777389"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/guideline3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="8"
+                        android:textColor="@color/hitam_dikit"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@id/guideline3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dimiliki" />
+
+                    <TextView
+                        android:id="@+id/favor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="0"
+                        android:textColor="@color/hitam_dikit"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/guideline3"
+                        app:layout_constraintTop_toBottomOf="@id/dimiliki" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/grey_dikit"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/guideline3"
+                        app:layout_constraintStart_toStartOf="@id/guideline3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/grey_dikit"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/guideline4"
+                        app:layout_constraintStart_toStartOf="@id/guideline4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_pusaka"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Pusaka Anda"
+                        android:textColor="@color/hitam_dikit"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@id/guideline4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_pusaka"
+                        android:layout_width="20dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pusaka"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pusaka"
+                        app:layout_constraintStart_toStartOf="@id/tv_pusaka"
+                        app:layout_constraintTop_toBottomOf="@id/tv_pusaka" />
+
+                    <TextView
+                        android:id="@+id/point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/regular"
+                        android:text="Point : 16"
+                        android:textColor="@color/hitam_dikit"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@id/img_pusaka"
+                        app:layout_constraintStart_toStartOf="@id/img_pusaka"
+                        app:layout_constraintTop_toBottomOf="@id/img_pusaka" />
+
+                    <TextView
+                        android:id="@+id/tambah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:background="@drawable/border_blue"
+                        android:fontFamily="@font/regular"
+                        android:padding="8dp"
+                        android:text="Tambah Pusaka +"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.54"
+                        app:layout_constraintStart_toEndOf="@id/guideline4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.505" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_sign_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/s_16dp"
+                android:layout_marginTop="@dimen/s_16dp"
+                android:layout_marginEnd="@dimen/s_16dp"
+                android:background="@drawable/border_blue"
+                android:text="Keluar"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card2" />
+
+            <TextView
+                android:id="@+id/btn_genre_sejarah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Segera Hadir"
+                android:textColor="@color/hitam_dikit"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_sign_out" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_coming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="@dimen/s_16dp"
+                android:nestedScrollingEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_genre_sejarah" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
+
+
+

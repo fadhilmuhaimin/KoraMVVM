@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottom_nav_comic"
+        android:title="@string/utama"
+        android:icon="@drawable/mainn"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        />
+    <item
+        android:id="@+id/bottom_nav_favorite"
+        android:title="@string/favorit"
+        android:icon="@drawable/hearth"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        app:showAsAction="always|withText"
+        />
+    <item
+        android:id="@+id/bottom_nav_profile"
+        android:title="@string/profil"
+        android:icon="@drawable/profiles"
+        app:cnb_backgroundColor="@color/colorPrimary"
+        />
+</menu>

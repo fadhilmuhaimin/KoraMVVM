@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="item"
+            type="id.autodhil.koramvvm.content.model.Komik" />
+    </data>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="4dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:elevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginStart="@dimen/s_8dp"
+        android:layout_marginEnd="@dimen/s_8dp"
+        android:layout_marginTop="@dimen/s_8dp"
+        android:layout_marginBottom="@dimen/s_8dp"
+        >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/sampul_komik"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            showImage="@{item.image}"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="10dip"
+            android:elevation="3dp"/>
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="17dp"
+            android:layout_height="@dimen/s_16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genrenya"
+            android:layout_marginTop="@dimen/s_8dp"
+            android:src="@drawable/ic_baseline_star_24"
+            android:backgroundTint="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/star"
+            android:layout_marginStart="2dp"
+            app:layout_constraintTop_toBottomOf="@id/genrenya"
+            android:layout_marginTop="@dimen/s_8dp"
+            android:text="@{item.rate}"
+            android:textSize="@dimen/s_10sp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/genrenya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/s_10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="2dp"
+            app:layout_constraintTop_toBottomOf="@id/sampul_komik"
+            android:layout_marginTop="@dimen/s_8dp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/regular"
+            android:text="@{item.genre}"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/sampul_komik"
+            app:layout_constraintEnd_toEndOf="@id/sampul_komik"
+            app:layout_constraintTop_toBottomOf="@id/rating"
+            android:layout_marginTop="2dp"
+            android:textSize="@dimen/s_12dp"
+            android:maxLines="1"
+            android:textAlignment="textStart"
+            android:text="@{item.title}"
+            android:textColor="@color/main_black"
+            android:fontFamily="@font/regular"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "609365642223",
+    "firebase_url": "https://kora-4cd97.firebaseio.com",
+    "project_id": "kora-4cd97",
+    "storage_bucket": "kora-4cd97.appspot.com"
+  },
+  "client": [
+    { 
+      "client_info": {
+        "mobilesdk_app_id": "1:609365642223:android:b58d89eb9844f3202cc41a",
+        "android_client_info": {
+          "package_name": "com.example.koraadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609365642223-hg1fup95b4hc0olbnq5dprsr3772ur2u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.koraadmin",
+            "certificate_hash": "03475a1b74624b6e479e11d7901b22fba48442c4"
+          }
+        },
+        {
+          "client_id": "609365642223-kverrhq3rh25dgudt53gmpv5qfqb4glj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbdyWWhzT2qbVbA-cQuGX7s8bf8smskec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609365642223-g58q1rtkbneacffcgqd8h9ovj3gt24km.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609365642223:android:bb5e990c70ac70572cc41a",
+        "android_client_info": {
+          "package_name": "com.example.koramvvm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609365642223-kverrhq3rh25dgudt53gmpv5qfqb4glj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbdyWWhzT2qbVbA-cQuGX7s8bf8smskec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609365642223-g58q1rtkbneacffcgqd8h9ovj3gt24km.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609365642223:android:b6cb2b8318d104872cc41a",
+        "android_client_info": {
+          "package_name": "id.autodhil.koramvvm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609365642223-0b24vd2i8bja3festiecus5km427rcr6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.autodhil.koramvvm",
+            "certificate_hash": "6065a10e6c5bb5b426901a4584ce4a8de411c650"
+          }
+        },
+        {
+          "client_id": "609365642223-kverrhq3rh25dgudt53gmpv5qfqb4glj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbdyWWhzT2qbVbA-cQuGX7s8bf8smskec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609365642223-g58q1rtkbneacffcgqd8h9ovj3gt24km.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
